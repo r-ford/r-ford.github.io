@@ -1,5 +1,5 @@
 My personal website
 
 To do:
-- Get the TeX working
+- Add email link
 - Add CV
