@@ -11,7 +11,7 @@ of [ocean heat uptake](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/
 (or [sea surface temperature](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019AV000130)), 
 radiative feedbacks, and climate sensitivity.
 
-In 2021, I completed a BS in applied physics and mathematics at [Stockton University](https://stockton.edu/sciences-math/),
+In 2021, I received a BS in applied physics and mathematics from [Stockton University](https://stockton.edu/sciences-math/),
 where I did some research in computational hydraulics.
 
 ---
