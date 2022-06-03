@@ -14,7 +14,12 @@ radiative feedbacks, and climate sensitivity.
 In 2021, I received a BS in applied physics and mathematics from [Stockton University](https://stockton.edu/sciences-math/),
 where I did some research in computational hydraulics.
 
----
+# Project Pythia
+
+As part of my RAship, I am helping develop content for [Project Pythia](https://projectpythia.org/), 
+which a community resource for learning how to use Python for geoscientific research.
+Check out the [Pythia Foundations book](https://foundations.projectpythia.org/landing-page.html)
+if you are new to Python or want to learn about commonly used libraries.
 
 # Posts
 
