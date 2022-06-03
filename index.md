@@ -14,7 +14,7 @@ warming, as different OHU/SST patterns in models excite different feedbacks and 
 different estimates of climate sensitivity.
 
 In 2021, I received a BS in applied physics and mathematics from [Stockton University](https://stockton.edu/sciences-math/),
-where I did some research in computational hydraulics.
+where I did some research in computational hydraulics. You can see my [CV here](cv_rford.pdf).
 
 # Project Pythia
 
