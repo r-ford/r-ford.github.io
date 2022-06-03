@@ -1,3 +1,8 @@
+---
+use_math: true
+---
+
+
 # Running CESM1.2.1 on SNOW at UAlbany
 Updated June 2022
 
