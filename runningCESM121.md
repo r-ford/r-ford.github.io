@@ -26,7 +26,7 @@ Create a directory that will hold the case directories and `cd` into it.
 
 ## Case setup
 
-Running the following line (with a descriptive name replacing `<casename>`), will
+Running the following line (with a descriptive name replacing `<casename>`) will
 create the case directory for a CESM run with the `E_1850_CAM5_CN` compset 
 (slab ocean, pre-industrial conditions, CAM5 physics, carbon-nitrogen 
 biogeochemistry) and `f19_g16` resolution (2º finite volume for the atmosphere,
@@ -39,8 +39,21 @@ biogeochemistry) and `f19_g16` resolution (2º finite volume for the atmosphere,
 For other configurations, see the [list of supported compsets](https://www.cesm.ucar.edu/models/cesm1.2/cesm/doc/modelnl/compsets.html).
 
 Now `cd` into `<casename>`. To change the number of nodes that the job will run on, 
-edit all `NTASKS` in `env_mach_pes.xml` such that 
-$\mathrm{NTASKS}=32*\mathrm{NODES}$. The default is 64 (2 nodes). Then run 
+change `NTASKS` for each component in `env_mach_pes.xml` such that 
+$\mathrm{NTASKS}=32*\mathrm{NODES}$. For example, if you want to run on 4 nodes, use:
+
+```bash
+./xmlchange NTASKS_ATM=128
+./xmlchange NTASKS_LND=128
+./xmlchange NTASKS_ICE=128
+./xmlchange NTASKS_OCN=128
+./xmlchange NTASKS_CPL=128
+./xmlchange NTASKS_GLC=128
+./xmlchange NTASKS_ROF=128
+./xmlchange NTASKS_WAV=128
+```
+
+The default is 64 (2 nodes). Then run 
 
 ```bash
 ./cesm_setup
