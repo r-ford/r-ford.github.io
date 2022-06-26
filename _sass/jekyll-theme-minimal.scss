@@ -31,7 +31,7 @@ h2 {
 }
 
 h3, h4, h5, h6 {
-  color:#777;
+  color:#888;
 }
 
 a {
@@ -60,7 +60,7 @@ a:hover small {
 }
 
 blockquote {
-  border-left:1px solid #bbb;
+  border-left:1px solid #ddd;
   margin:0;
   padding:0 0 0 20px;
   font-style:italic;
@@ -68,14 +68,14 @@ blockquote {
 
 code, pre {
   font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
-  color:#eee;
+  color:#111;
 }
 
 pre {
   padding:8px 15px;
   background: #111;
   border-radius:5px;
-  border:1px solid #e5e5e5;
+  border:1px solid #2e8b57;
   overflow-x: auto;
 }
 
