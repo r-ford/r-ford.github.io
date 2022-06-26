@@ -2,7 +2,7 @@
 @import "rouge-github";
 
 body {
-  background-color: #222;
+  background-color: #111;
   padding:50px;
   font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#ddd;
@@ -78,6 +78,10 @@ pre {
   border-radius:5px;
   border:1px solid #2e8b57;
   overflow-x: auto;
+}
+
+.highlight {
+  opacity:0.0
 }
 
 table {
