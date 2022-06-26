@@ -2,7 +2,7 @@
 @import "rouge-github";
 
 body {
-  background-color: #ddd;
+  background-color: #111;
   padding:50px;
   font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#222;
@@ -10,7 +10,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color:#111;
+  color:#bbb;
   margin:0 0 20px;
 }
 
@@ -27,21 +27,20 @@ h1 {
 }
 
 h2 {
-  color:#393939;
+  color:#999;
 }
 
 h3, h4, h5, h6 {
-  color:#494949;
+  color:#888;
 }
 
 a {
-  color:#267CB9;
+  color:#2e8b57;
   text-decoration:none;
 }
 
 a:hover, a:focus {
   color:#069;
-  font-weight: bold;
 }
 
 a small {
@@ -61,7 +60,7 @@ a:hover small {
 }
 
 blockquote {
-  border-left:1px solid #e5e5e5;
+  border-left:1px solid #ddd;
   margin:0;
   padding:0 0 0 20px;
   font-style:italic;
@@ -69,15 +68,20 @@ blockquote {
 
 code, pre {
   font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
-  color:#333;
+  color:#ccc;
+  background-color:000;
 }
 
 pre {
   padding:8px 15px;
-  background: #f8f8f8;
+  background: #111;
   border-radius:5px;
-  border:1px solid #e5e5e5;
+  border:1px solid #2e8b57;
   overflow-x: auto;
+}
+
+.highlight {
+  opacity:0.0
 }
 
 table {
@@ -92,7 +96,7 @@ th, td {
 }
 
 dt {
-  color:#444;
+  color:#777;
   font-weight:700;
 }
 
