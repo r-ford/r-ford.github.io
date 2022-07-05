@@ -11,11 +11,9 @@ Based on [Brian's tutorial for ATM 623](http://www.atmos.albany.edu/facstaff/bro
 
 Log into the head node:
 
-<div style="background-color: rgb(0, 0, 0);">
 ```bash
 ssh <NetID>@head.arcc.albany.edu
 ```
-</div>
   
 Add the following line to the `.cshrc` file in your home directory:
 
