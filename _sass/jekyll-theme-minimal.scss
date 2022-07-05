@@ -69,13 +69,13 @@ blockquote {
 code, pre {
   font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
   color:#aaa;
-  background: #000;
 }
 
 pre {
   padding:8px 15px;
   background: #000;
-  border:1px solid #ddd;
+  border:1px solid #111;
+  border-radius: 5px;
   overflow-x: auto;
 }
 
