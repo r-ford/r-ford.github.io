@@ -11,7 +11,7 @@ Based on [Brian's tutorial for ATM 623](http://www.atmos.albany.edu/facstaff/bro
 
 Log into the head node:
 
-```bash
+```
 ssh <NetID>@head.arcc.albany.edu
 ```
   
@@ -33,7 +33,7 @@ create the case directory for a CESM run with the `E_1850_CAM5_CN` compset
 biogeochemistry) and `f19_g16` resolution (2º finite volume for the atmosphere,
 1º displaced-pole grid for the ocean and sea ice).
 
-```bash
+```
 /network/rit/lab/roselab_rit/cesm/cesm1_2_1/scripts/create_newcase -mach snow -compset E_1850_CAM5_CN -res f19_g16 -case <casename>
 ```
 
@@ -44,7 +44,7 @@ Now `cd` into `<casename>`. To change the number of nodes that the job will run 
 change `NTASKS` for each component in `env_mach_pes.xml` such that 
 $\mathrm{NTASKS}=32*\mathrm{NODES}$. For example, if you want to run on 4 nodes, use:
 
-```bash
+```
 ./xmlchange NTASKS_ATM=128
 ./xmlchange NTASKS_LND=128
 ./xmlchange NTASKS_ICE=128
@@ -57,7 +57,7 @@ $\mathrm{NTASKS}=32*\mathrm{NODES}$. For example, if you want to run on 4 nodes,
 
 The default is 64 (2 nodes). Then run 
 
-```bash
+```
 ./cesm_setup
 ```
 
@@ -72,7 +72,7 @@ the current setting.
 One common thing to change is the simulation length; note that output is monthly by
 default. For example:
 
-```bash
+```
 ./xmlchange STOP_OPTION=nyears
 ./xmlchange STOP_N=2
 ./xmlchange RESUBMIT=9
@@ -87,13 +87,13 @@ If you use another compset, you may want to do some benchmarking yourself.
 If running the SOM (as in compset E), put the forcing file in `/data/rose_scr/cesm_inputdata/ocn/docn7/SOM`,
 and back in the case directory run
 
-```bash
+```
 ./xmlchange DOCN_SOM_FILENAME=<forcingfilename>.nc
 ```
 
 For the OHU TCR project piControl run, I am using 
 
-```bash
+```
 ./xmlchange DOCN_SOM_FILENAME=pop_frc.b.e11.B1850C5CN.f19_g16.130429.nc
 ```
 
@@ -123,7 +123,7 @@ unless you do some benchmarking and find that it works better for you.
 For now, you need to add the following line to `env_mach_specific` for the Intel
 compiler to work:
 
-```bash
+```
 source /network/rit/lab/snowclus/modules/latest.csh
 ```
 
@@ -147,7 +147,7 @@ space.
 
 For example, if you are part of the Zhou group, you could do this:
 
-```bash
+```
 ./xmlchange EXEROOT=/data/zhou_scr/$CCSMUSER/cesmruns/$CASE/bld
 ```
 
@@ -155,7 +155,7 @@ At the same time you should also set the run directory `RUNDIR` (where the outpu
 files will be written). Usually this would be another subdirectory alongside the
 build:
 
-```bash
+```
 ./xmlchange RUNDIR=/data/zhou_scr/$CCSMUSER/cesmruns/$CASE/run
 ```
 
@@ -164,7 +164,7 @@ build:
 Change the short-term archive directory (in `env_run.xml`) to somewhere 
 you know you have write permissions with
 
-```bash
+```
 ./xmlchange DOUT_S_ROOT=<directory>
 ```
 
@@ -183,7 +183,7 @@ somewhere I did:
 
 Then build the model with the following line:
 
-```bash
+```
 srun -p snow `pwd`/<casename>.build
 ```
 
@@ -195,13 +195,13 @@ configuration is probably messed up, and the job will not be able to be submitte
 
 Finally, submit the job with
 
-```bash
+```
 ./<casename>.submit
 ```
 
 You can check the queue, see node info, or cancel the job with 
 
-```bash
+```
 squeue
 sinfo
 scancel <JOBID>
