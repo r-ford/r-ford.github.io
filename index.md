@@ -6,7 +6,7 @@ at the [University at Albany, SUNY](https://www.albany.edu/), advised by [Dr. Br
 I am generally interested in climate change, dynamics, and modeling. 
 My current research involves using climate models to investigate the so-called 
 [pattern effect](https://journals.ametsoc.org/view/journals/clim/33/18/jcliD191011.xml), 
-which refers to the coupling of [spatiotemporal patterns](https://en.wikipedia.org/wiki/Spatiotemporal_pattern)
+which refers to the coupling of spatiotemporal patterns
 of [ocean heat uptake](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2013GL058955)
 (or [sea surface temperature](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019AV000130)), 
 radiative feedbacks, and climate sensitivity. This has implications for projections of future
