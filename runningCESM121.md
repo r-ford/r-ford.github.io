@@ -42,7 +42,7 @@ For other configurations, see the lists of supported [compsets](https://www.cesm
 
 Now `cd` into `<casename>`. To change the number of nodes that the job will run on, 
 change `NTASKS` for each component in `env_mach_pes.xml` such that 
-$\mathrm{NTASKS}=32*\mathrm{NODES}$. For example, if you want to run on 4 nodes, use:
+$\mathrm{NTASKS}=32\times\mathrm{NODES}$. For example, if you want to run on 4 nodes, use:
 
 ```
 ./xmlchange NTASKS_ATM=128
