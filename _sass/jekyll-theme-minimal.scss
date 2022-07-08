@@ -2,7 +2,7 @@
 @import "rouge-github";
 
 body {
-  background-color: #212121;
+  background-color: #111;
   padding:50px;
   font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#eee;
@@ -68,13 +68,16 @@ blockquote {
 
 code, pre {
   font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
-  color:#aaa;
+  color:#eee;
+  background-color: #000;
+  padding: 2px;
+  border-radius: 5px;
 }
 
 pre {
   padding:8px 15px;
   background: #000;
-  border:1px solid #111;
+  border:2px solid #111;
   border-radius: 5px;
   overflow-x: auto;
 }
