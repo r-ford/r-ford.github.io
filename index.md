@@ -1,3 +1,10 @@
+
+# Posts
+
+[Tutorial on running CESM1.2.1 on the SNOW cluster at UAlbany](runningCESM121.html)
+
+[Useful CESM1.2 links](CESMlinks.md)
+
 #  About me
 
 Hi! I am a PhD student in the [Department of Atmospheric & Environmental Sciences](https://www.albany.edu/daes) 
@@ -16,7 +23,7 @@ different estimates of climate sensitivity.
 In 2021, I received a BS in applied physics and mathematics from [Stockton University](https://stockton.edu/sciences-math/),
 where I did some research in computational hydraulics. You can see my [CV here](cv_rford.pdf).
 
-# Project Pythia
+### Project Pythia
 
 As part of my RAship, I am helping develop content for [Project Pythia](https://projectpythia.org/), 
 which a community resource for learning how to use Python for geoscientific research.
@@ -27,8 +34,3 @@ Project Pythia is open-source, with the source code hosted and maintained on Git
 under the [Project Pythia organization](https://github.com/ProjectPythia).
 Anyone interested is welcome to [contribute](https://projectpythia.org/contributing.html)!
 
-# Posts
-
-[Tutorial on running CESM1.2.1 on the SNOW cluster at UAlbany](runningCESM121.html)
-
-[Useful CESM1.2 links](CESMlinks.md)
