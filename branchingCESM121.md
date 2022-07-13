@@ -64,25 +64,17 @@ cp /network/rit/lab/roselab_rit/rford/cesm_archive/<ctrl-name>/rest/<YYYY-MM-DD>
 cp /data/rose_scr/<NetID>/cesmruns/<ctrl-name>/run/rpointer.ocn.* /data/rose_scr/<NetID>/cesmruns/<branch-name>/run/
 ```
 
-### Change a couple directories
-
 As with a non-branch run, you need to change the archiving directory to somewhere you have write permissions. For example, I run
 
 ```
 ./xmlchange DOUT_S_ROOT=/network/rit/lab/roselab_rit/rford/cesm_archive/$CASE
 ```
 
-One trick you can do is to set `EXEROOT` to point to the control run, 
-since there’s no reason to rebuild the model from source for each branch:
+## Build and submit
+
+Same as before:
 
 ```
-./xmlchange EXEROOT=/data/rose_scr/<NetID>/cesmruns/<ctrl-name>/bld
-./xmlchange BUILD_COMPLETE=TRUE
-```
-
-## Submit the job
-
-No need to wait 20-30 minutes to build! Just submit the job with 
-```
+srun -p snow `pwd`/<branch-name>.build
 ./<branch-name>.submit
 ```
