@@ -6,7 +6,7 @@ use_math: true
 
 Updated July 2022
 
-This is a continuation of [Running CESM1.2.1](runningCESM121.md) but for creating branched runs.
+This is a continuation of [Running CESM1.2.1](runningCESM121.md) for creating branched runs.
 
 ## Case setup
 
