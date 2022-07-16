@@ -63,7 +63,6 @@ Depending on where you chose to archive your runs, copy over the restart files w
 
 ```
 cp /network/rit/lab/roselab_rit/rford/cesm_archive/<ctrl-name>/rest/<YYYY-MM-DD>-00000/* /data/rose_scr/<NetID>/cesmruns/<branch-name>/run/
-cp /data/rose_scr/<NetID>/cesmruns/<ctrl-name>/run/rpointer.ocn.* /data/rose_scr/<NetID>/cesmruns/<branch-name>/run/
 ```
 
 As with a non-branch run, you need to change the archiving directory to somewhere you have write permissions. For example, I run
