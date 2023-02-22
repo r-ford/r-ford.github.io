@@ -4,9 +4,8 @@ use_math: true
 
 
 # Running CESM1.2.1 on SNOW at UAlbany
-Updated June 2022
 
-Based on [Brian's tutorial for ATM 623](http://www.atmos.albany.edu/facstaff/brose/classes/ATM623_Spring2017/2017/03/16/CESM-tutorial.html), as well as [Yuan-Jen's edits](https://hackmd.io/@yuanjenlin/CESM_on_SNOW).
+This is based on [Brian Rose's tutorial for ATM 623](http://www.atmos.albany.edu/facstaff/brose/classes/ATM623_Spring2017/2017/03/16/CESM-tutorial.html), as well as [Yuan-Jen Lin's notes](https://hackmd.io/@yuanjenlin/CESM_on_SNOW).
 ## Environment setup
 
 Log into the head node:
@@ -15,7 +14,7 @@ Log into the head node:
 ssh <NetID>@head.arcc.albany.edu
 ```
   
-Add the following line to the `.cshrc` file in your home directory:
+Add the following line to the `.cshrc` file in your home directory. You will only need to do this once:
 
 ```
 setenv CCSMROOT /network/rit/home/br546577/roselab_rit/cesm/cesm1_2_1
@@ -28,10 +27,9 @@ Create a directory that will hold the case directories and `cd` into it.
 ## Case setup
 
 Running the following line (with a descriptive name replacing `<casename>`) will
-create the case directory for a CESM run with the `E_1850_CAM5_CN` compset 
-(slab ocean, pre-industrial conditions, CAM5 physics, carbon-nitrogen 
-biogeochemistry) and `f19_g16` resolution (2º finite volume for the atmosphere,
-1º displaced-pole grid for the ocean and sea ice).
+create the case directory for a CESM run with
+- the `E_1850_CAM5_CN` compset (slab ocean, pre-industrial conditions, CAM5 physics, carbon-nitrogen biogeochemistry) and 
+- the `f19_g16` resolution (2º finite volume for the atmosphere, 1º displaced-pole grid for the ocean and sea ice).
 
 ```
 /network/rit/lab/roselab_rit/cesm/cesm1_2_1/scripts/create_newcase -mach snow -compset E_1850_CAM5_CN -res f19_g16 -case <casename>
@@ -61,7 +59,7 @@ The default is 64 (2 nodes). Then run
 ./cesm_setup
 ```
 
-More details on case setup can be found in [chapter 2 of the CESM1.2 User's Guide](https://www.cesm.ucar.edu/models/cesm1.2/cesm/doc/usersguide/c513.html).
+More details on case setup can be found in [chapter 2 of the CESM1.2 User's Guide](https://www2.cesm.ucar.edu/models/cesm1.2/cesm/doc/usersguide/c513.html).
 
 ## Runtime options
 
@@ -69,8 +67,7 @@ The settings that control how the model runs are found in the file `env_run.xml`
 You can either edit the file directly or use `./xmlchange`. Use `./xmlquery` to see 
 the current setting.
 
-One common thing to change is the simulation length; note that output is monthly by
-default. For example:
+One common thing to change is the simulation length. For example:
 
 ```
 ./xmlchange STOP_OPTION=nyears
@@ -84,18 +81,8 @@ between our resubmissions. SNOW has a 12-hour time limit, so make sure each job 
 go over that. See the benchmarking at the end of this document. 
 If you use another compset, you may want to do some benchmarking yourself.
 
-If running the SOM (as in compset E), put the forcing file in `/data/rose_scr/cesm_inputdata/ocn/docn7/SOM`,
-and back in the case directory run
-
-```
-./xmlchange DOCN_SOM_FILENAME=<forcingfilename>.nc
-```
-
-For the OHU TCR project piControl run, I am using 
-
-```
-./xmlchange DOCN_SOM_FILENAME=pop_frc.b.e11.B1850C5CN.f19_g16.130429.nc
-```
+The output files are monthly by default, so running the model for less than a month won't write any output. To change the 
+output frequency, [see this section of the User's Guide](https://www2.cesm.ucar.edu/models/cesm1.2/cesm/doc/usersguide/x2172.html).
 
 Optionally change CO$_2$ and other stuff in `user_nl_cam` or the other `user_nl`
 files. For example, add the following line to `user_nl_cam` for a 2xCO2 
@@ -108,19 +95,34 @@ co2vmr = 569.4e-6
 You may want to uncomment and edit the email notification lines in `<casename>.run`
 to be notified when the job ends.
 
+### Slab ocean model
+
+If you are running the SOM (as in compset E), copy the forcing file into `/data/rose_scr/cesm_inputdata/ocn/docn7/SOM`,
+and back in the case directory run
+
+```
+./xmlchange DOCN_SOM_FILENAME=<forcingfilename>.nc
+```
+
+There are many SOM forcing files already there, so for example, if you want a piControl run, you can use 
+
+```
+./xmlchange DOCN_SOM_FILENAME=pop_frc.b.e11.B1850C5CN.f19_g16.130429.nc
+```
+
 ### Additional required changes
 
 In `<casename>.run`, change the value of `--mem` from `MaxMemPerNode` to some value
 (the max seems to be 128G). 
 
 If you did not change `NTASKS` (because you wanted to use 2 nodes), 
-you will notice in `<casename>.run` that `--nodes=1`. Change it to 2 and remove the
+you may notice in `<casename>.run` that `--nodes=1`. Change it to 2 and remove the
 `-O` option that should be under the two `--mail` lines. As far as I know,
 that enables [hyper-threading](https://en.wikipedia.org/wiki/Hyper-threading),
 allowing one node (core) to be treated as two. I don't recommend this (see below)
 unless you do some benchmarking and find that it works better for you.
 
-For now, you need to add the following line to `env_mach_specific` for the Intel
+For now, you also need to add the following line to `env_mach_specific` for the Intel
 compiler to work:
 
 ```
