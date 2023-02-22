@@ -4,8 +4,6 @@ use_math: true
 
 # Branching CESM1.2.1 on SNOW at UAlbany
 
-Updated August 2022
-
 This is a continuation of [Running CESM1.2.1](runningCESM121.md) for creating branched runs.
 See the [CESM1.2 User's Guide](https://www.cesm.ucar.edu/models/cesm1.2/cesm/doc/usersguide/x1894.html)
 for another example.
