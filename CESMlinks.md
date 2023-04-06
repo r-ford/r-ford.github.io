@@ -1,4 +1,4 @@
-# CESM1.2 Links
+# CESM Links
 
 [CESM1.2 User's Guide](https://www.cesm.ucar.edu/models/cesm1.2/cesm/doc/usersguide/book1.html)
 
