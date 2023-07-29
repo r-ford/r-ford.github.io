@@ -17,6 +17,8 @@ different estimates of climate sensitivity.
 In 2021, I received a BS in applied physics and mathematics from [Stockton University](https://stockton.edu/sciences-math/),
 where I did some research in computational hydraulics.
 
+---
+
 ## CESM Tutorials and Info
 
 ### Running CESM1.2.1 on the SNOW cluster at UAlbany:
