@@ -186,7 +186,7 @@ somewhere I did:
 Then build the model with the following line:
 
 ```
-srun -p snow `pwd`/<casename>.build
+srun -p snow ./<casename>.build
 ```
 
 This will take some time: about 20 and 30 minutes for the E and B compsets I ran. 
