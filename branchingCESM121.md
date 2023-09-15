@@ -74,6 +74,6 @@ As with a non-branch run, you need to change the archiving directory to somewher
 Same as before:
 
 ```
-srun -p snow `pwd`/<branch-name>.build
+srun -p snow ./<branch-name>.build
 ./<branch-name>.submit
 ```
