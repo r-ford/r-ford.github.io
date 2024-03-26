@@ -11,10 +11,10 @@ This is based on [Brian Rose's tutorial for ATM 623](http://www.atmos.albany.edu
 Log into the head node:
 
 ```
-ssh <NetID>@head.arcc.albany.edu
+ssh <NetID>@headnode7.arcc.albany.edu
 ```
   
-Add the following line to the `.cshrc` file in your home directory. You will only need to do this once:
+Add the following line to the `.cshrc` file in your home directory (if this file does not exist, create it). You will only need to do this once:
 
 ```
 setenv CCSMROOT /network/rit/home/br546577/roselab_rit/cesm/cesm1_2_1
