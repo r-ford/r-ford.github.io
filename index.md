@@ -3,25 +3,26 @@
 
 ### [CV](cv_ford.pdf)
 
+---
+
 Hi! I am a PhD student in the [Department of Atmospheric & Environmental Sciences](https://www.albany.edu/daes) 
 at the [University at Albany, SUNY](https://www.albany.edu/), advised by [Dr. Brian Rose](https://brian-rose.github.io/).
-I am generally interested in climate change, dynamics, and modeling. 
-My current research involves using climate models to investigate the [pattern effect](https://journals.ametsoc.org/view/journals/clim/33/18/jcliD191011.xml), 
-which refers to the coupling of spatiotemporal patterns
-of [ocean heat uptake](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2013GL058955)
-(or [sea surface temperature](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019AV000130)), 
-radiative feedbacks, and climate sensitivity. This has implications for projections of future
-warming, as different OHU/SST patterns in models excite different feedbacks and result in
-different estimates of climate sensitivity.
+I am generally interested in global climate change and large-scale dynamics. My current research uses climate models to 
+explore how atmosphere–ocean–sea ice interactions influence radiative feedbacks and climate sensitivity. In particular, 
+I am interested in how slow variability of the Southern Ocean could impact radiative feedbacks through pattern effects. 
+
+I also have an interest in open science and contribute regularly to [Project Pythia](https://projectpythia.org/), which is both a collection of geoscientific Python tutorials and a community of people passionate about Python and open, reproducible science.
 
 In 2021, I received a BS in applied physics and mathematics from [Stockton University](https://stockton.edu/sciences-math/),
-where I did some research in computational hydraulics.
+where I did some research in computational hydraulics. In my free time, I enjoy playing guitar and reading philosophy.
 
 ---
 
 ## CESM Tutorials and Info
 
-### Running CESM1.2.1 on the SNOW cluster at UAlbany:
+### Running CESM1.2.1 on the SNOW cluster at UAlbany
+
+These two documents explain the process of running the version of CESM1 that was ported on one of the Department's computing clusters, SNOW. Note that by the end of 2024, these may become outdated as the Department moves to using a new cluster.
 
 [Part 1: Setup and Startup Runs](runningCESM121.md)
 
