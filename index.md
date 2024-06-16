@@ -18,7 +18,7 @@ where I did some research in computational hydraulics. In my free time, I enjoy 
 
 ---
 
-## CESM Tutorials and Info
+## CESM tutorials and info
 
 ### Running CESM1.2.1 on the SNOW cluster at UAlbany
 
