@@ -4,7 +4,7 @@ layout: post
 mathjax: true
 ---
 
-CESM2 was ported onto a DAES server thanks to the work of Li Zhuo, Kevin Tyle, and others. The following is a short step-by-step guide to running the model.
+CESM2.1.5 was ported onto a DAES server thanks to the work of Li Zhuo, Kevin Tyle, and others. The following is a short step-by-step guide to running the model.
 
 ## Log in and environment
 
