@@ -77,9 +77,9 @@ Run `case.build`, which will take some time. Then submit your job to the cluster
 
 | Compset                        | Grid    | Nodes | Sim length | Run time (s)        | Cost* (wall hrs/sim year) |
 |--------------------------------|---------|-------|------------|---------------------|-----------------------|
-| B1850 (CAM6, POP2)             | f09_g17 | 4     | 3 m        | \\(\lessim\\)16,580 | 18.42                 |
-| B1850 (CAM6, POP2)             | f19_g16 | 4     | 1 y        | \\(\lessim\\)21,432 | 5.95                  |
-| B1850C4L45BGCBPRP (CAM4, POP2) | f09_g16 | 4     | 1 y        | \\(\lessim\\)23,150 | 6.34                  |
-| B1850C4L45BGCBPRP (CAM4, POP2) | f19_g16 | 4     | 1 y        | \\(\lessim\\)12,029 | 3.34                  |
+| B1850 (CAM6, POP2)             | f09_g17 | 4     | 3 m        | \\(\leq\\)16,580 | 18.42                 |
+| B1850 (CAM6, POP2)             | f19_g16 | 4     | 1 y        | \\(\leq\\)21,432 | 5.95                  |
+| B1850C4L45BGCBPRP (CAM4, POP2) | f09_g16 | 4     | 1 y        | \\(\leq\\)23,150 | 6.34                  |
+| B1850C4L45BGCBPRP (CAM4, POP2) | f19_g16 | 4     | 1 y        | \\(\leq\\)12,029 | 3.34                  |
 
 *For a 12-hour time limit per job, the maximum number of years you can run per job is \\(\lfloor 12/\mathrm{Cost}\rfloor\\). If this is zero, you need to run in monthslong chunks.
