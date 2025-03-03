@@ -29,7 +29,7 @@ Run `. ~/.bashrc` once per session.
 The model code and scripts are stored in the directory `/zhoulab_rit/lzhuo/my_cesm_sandbox/`. Create a new case with 
 
 ```
-/network/rit/lab/zhoulab_rit/lzhuo/my_cesm_sandbox/cime/scripts/create_newcase –-compset <compset> --res <res> --machine burst-daes --case <case-name> --run-unsupported
+/network/rit/lab/zhoulab_rit/lzhuo/my_cesm_sandbox/cime/scripts/create_newcase --compset <compset> --res <res> --machine burst-daes --case <case-name> --run-unsupported
 ```
 
 The flag `--run-unsupported` is optional, depending on whether you are running an "unsupported" compset/res combination. The script will tell you if you are trying to run unsupported options.
@@ -77,9 +77,9 @@ Run `case.build`, which will take some time. Then submit your job to the cluster
 
 | Compset                        | Grid    | Nodes | Sim length | Run time (s)        | Cost* (wall hrs/sim year) |
 |--------------------------------|---------|-------|------------|---------------------|-----------------------|
-| B1850 (CAM6, POP2)             | f09_g17 | 4     | 3 m        | \\(\leq\\)16,580 | 18.42                 |
-| B1850 (CAM6, POP2)             | f19_g16 | 4     | 1 y        | \\(\leq\\)21,432 | 5.95                  |
-| B1850C4L45BGCBPRP (CAM4, POP2) | f09_g16 | 4     | 1 y        | \\(\leq\\)23,150 | 6.34                  |
-| B1850C4L45BGCBPRP (CAM4, POP2) | f19_g16 | 4     | 1 y        | \\(\leq\\)12,029 | 3.34                  |
+| B1850 (CAM6, POP2)             | f09_g17 | 4     | 3 m        | ~16,580 | ~18.42                 |
+| B1850 (CAM6, POP2)             | f19_g16 | 4     | 1 y        | ~21,432 | ~5.95                  |
+| B1850C4L45BGCBPRP (CAM4, POP2) | f09_g16 | 4     | 1 y        | ~23,150 | ~6.34                  |
+| B1850C4L45BGCBPRP (CAM4, POP2) | f19_g16 | 4     | 1 y        | ~12,029 | ~3.34                  |
 
 *For a 12-hour time limit per job, the maximum number of years you can run per job is \\(\lfloor 12/\mathrm{Cost}\rfloor\\). If this is zero, you need to run in monthslong chunks.
