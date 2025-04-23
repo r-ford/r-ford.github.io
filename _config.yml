@@ -1,6 +1,6 @@
 title: "Robert R. Ford"
 author: "Robert R. Ford"
-description: "Atmospheric science PhD student at the University at Albany, SUNY"
+description: 
 permalink: /:title/
 lang: "en"
 excerpt_separator: "\n\n\n"
@@ -10,7 +10,7 @@ date_format: "%B %d, %Y"
 
 show_excerpts: false        # show article excerpts on the home page
 show_frame: false           # adds a gray frame to the site
-show_sidebar: true        # show a sidebar instead of the usual header
+show_sidebar: false        # show a sidebar instead of the usual header
 dark_header: true 
 minimal: false             # use a dark header
 
